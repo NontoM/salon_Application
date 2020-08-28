@@ -38,6 +38,13 @@ city
 salonaddress 
 );
 
+CREATE TABLE adsimages (
+imagesid INTEGER UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+caption VARCHAR(45) NOT NULL,
+images LONGBLOB NOT NULL,
+created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+)
+
 adsimages(
 adimgid 
 images 
