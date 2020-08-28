@@ -26,16 +26,16 @@ created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 )
 
 advertisers_ads(
-adsid
-title 
-company/salonname
-phonenumber
-emailaddress
-descrp 
-price 
-province 
-city 
-salonaddress 
+adsid int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+title varchar(50),
+company/salonname varchar(50) UNIQUE,
+phonenumber varchar (50) NOT NULL UNIQUE,
+emailaddress varchar(50) NOT NULL UNIQUE,
+descrp varchar(80) NOT NULL,
+price int(50) NOT NULL,
+province  varchar(50) NOT NULL,
+city varchar(50) NOT NULL,
+salonaddress varchar(50)  NOT NULL UNIQUE,
 );
 
 adsimages(
@@ -45,32 +45,32 @@ adsid
 )
 
 booking_table(
-booking_id
-title 
-emailaddress
-phonenumber
-bmessage
+booking_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+title varchar(50) NOT NULL,
+emailaddress varchar(50) NOT NULL UNIQUE
+phonenumber varchar (50) NOT NULL UNIQUE,
+bmessage varchar (80) NOT NULL,
 )
 
 payment(
-paymentid
-amount
-category
-durationd
-paymentdate
+paymentid int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+amount int(10) NOT NULL,
+category varchar(50) NOT NULL,
+duration varchar(50) NOT NULL
+paymentdate DATETIME DEFAULT CURRENT_TIMESTAMP 
 )
 
 comment_table
 (
-    commentid
-    comment 
-    comentdate
+    commentid int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    comment varchar(80),
+    comentdate DATETIME DEFAULT CURRENT_TIMESTAMP 
 )
 ads_status(
-ads_statusid
-adsstatus 
-membership_status
-comment reviews
+ads_statusid int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+adsstatus varchar(50) NOT NULL,
+membership_status varchar(80) NOT NULL,
+comment reviews varchar(80) NOT NULL,
 )
 
 
