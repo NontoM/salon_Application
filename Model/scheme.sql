@@ -1,34 +1,34 @@
 
-customer_Table(
+CREATE TABLE customer_Table(
 customerid int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 username VARCHAR(50) NOT NULL UNIQUE,
 passcode VARCHAR(255) NOT NULL,
 created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 )
 
-admin_Table(
+CREATE TABLE admin_Table(
 adminid int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 username VARCHAR(50) NOT NULL UNIQUE,
 passcode VARCHAR(255) NOT NULL,
 created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 )
 
-advertisers_Table(
+CREATE TABLE advertisers_Table(
 advertisersid int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 username varchar (50) NOT NULL UNIQUE,
 pascode varchar (50) NOT NULL,
 firstname varchar (50),
-phonenumber varchar (50) UNIQUE,
 lastname varchar(50),
+phonenumber varchar (50) UNIQUE,
 emailaddress varchar(50) UNIQUE,
 salonaddress varchar(50),
 created_at DATETIME DEFAULT CURRENT_TIMESTAMP   
 )
 
-advertisers_ads(
+CREATE TABLE advertisers_ads(
 adsid int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 title varchar(50),
-company/salonname varchar(50) UNIQUE,
+company varchar(50) UNIQUE,
 phonenumber varchar (50) NOT NULL UNIQUE,
 emailaddress varchar(50) NOT NULL UNIQUE,
 descrp varchar(80) NOT NULL,
@@ -36,42 +36,57 @@ price int(50) NOT NULL,
 province  varchar(50) NOT NULL,
 city varchar(50) NOT NULL,
 salonaddress varchar(50)  NOT NULL UNIQUE,
+created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+advertisersid int NOT NULL,
+FOREIGN KEY (advertisersid) REFERENCES advertisers_Table(advertisersid)
 );
 
 CREATE TABLE adsimages (
 imagesid INTEGER UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
 caption VARCHAR(45) NOT NULL,
 images LONGBLOB NOT NULL,
-created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+adsid int NOT NULL,
+FOREIGN KEY (adsid) REFERENCES advertisers_ads(adsid)
 )
 
-booking_table(
+CREATE TABLE booking_table(
 booking_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 title varchar(50) NOT NULL,
 emailaddress varchar(50) NOT NULL UNIQUE
 phonenumber varchar (50) NOT NULL UNIQUE,
 bmessage varchar (80) NOT NULL,
+created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+customerid int NOT NULL,
+FOREIGN KEY (customerid) REFERENCES customer_Table(customerid)
 )
 
-payment(
+CREATE TABLE payment(
 paymentid int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 amount int(10) NOT NULL,
 category varchar(50) NOT NULL,
-duration varchar(50) NOT NULL
-paymentdate DATETIME DEFAULT CURRENT_TIMESTAMP 
+duration varchar(50) NOT NULL,
+created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+advertisersid int NOT NULL,
+FOREIGN KEY (advertisersid) REFERENCES advertisers_Table(advertisersid)
 )
 
-comment_table
-(
-    commentid int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    comment varchar(80),
-    comentdate DATETIME DEFAULT CURRENT_TIMESTAMP 
+CREATE TABLE comment_table(
+commentid int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+comment varchar(80),
+created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+customerid INT NOT NULL,
+FOREIGN KEY (advertisersid) REFERENCES advertisers_Table(advertisersid)
 )
-ads_status(
+
+CREATE TABLE ads_status(
 ads_statusid int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 adsstatus varchar(50) NOT NULL,
 membership_status varchar(80) NOT NULL,
 comment reviews varchar(80) NOT NULL,
+created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+adminid INT NOT NULL,
+FOREIGN KEY (adminid) REFERENCES admin_Table(adminid)
 )
 
 
