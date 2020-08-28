@@ -1,28 +1,28 @@
 
 customer_Table(
 customerid int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-username varchar (50),
-pascode varchar (50),
-regDate DATE 
+username VARCHAR(50) NOT NULL UNIQUE,
+passcode VARCHAR(255) NOT NULL,
+created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 )
 
 admin_Table(
 adminid int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-username varchar (50),
-pascode varchar (50),
-regDate DATE   
+username VARCHAR(50) NOT NULL UNIQUE,
+passcode VARCHAR(255) NOT NULL,
+created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 )
 
 advertisers_Table(
 advertisersid int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-username varchar (50),
-pascode varchar (50),
-firstname varchar (50)
-phonenumber varchar (50)
-lastname varchar(50)
-emailaddress varchar(50)
-salonaddress varchar(50)
-regDate DATE   
+username varchar (50) NOT NULL UNIQUE,
+pascode varchar (50) NOT NULL,
+firstname varchar (50),
+phonenumber varchar (50) UNIQUE,
+lastname varchar(50),
+emailaddress varchar(50) UNIQUE,
+salonaddress varchar(50),
+created_at DATETIME DEFAULT CURRENT_TIMESTAMP   
 )
 
 advertisers_ads(
