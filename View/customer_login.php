@@ -1,6 +1,6 @@
 <?php
 // Include config file
-require_once "../Controller/advertiserLogin_Controller.php";
+require_once "../Controller/customerLogin_Controller.php";
 ?>
  
 <!DOCTYPE html>
@@ -16,7 +16,7 @@ require_once "../Controller/advertiserLogin_Controller.php";
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>Log in</title>
     </head>
-<style>
+    <style>
 body{
   width: 100%;
   padding:0;
@@ -29,7 +29,7 @@ form{
 }
 #wrapper{
 margin-left:450px;
-margin-top:100px;
+margin-top:60px;
 width: 500px;
 padding-top:24px;
 padding-bottom:20px;
@@ -65,7 +65,7 @@ span{
 .log_opt{
 margin-left:450px;
 margin-top:60px;
-width: 500px !important;
+width: 500px;
 padding-top:24px;
 padding-bottom:20px;
 padding-left:45px;
@@ -75,12 +75,11 @@ font-size:16px;
 -webkit-box-shadow: 3px 3px 5px 6px #ccc;
 box-shadow:         3px 3px 5px 6px #ccc; 
 }
-
 </style>
 <body>
 
-    <div class="container col-sm-12" id="wrapper">
-        <h2>PARTNER LOG IN</h2>
+<div class="container col-md-12 col-sm-12" id="wrapper">
+        <h2>LOG IN</h2>
         <br>
         <p>Please fill in your credentials to login.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -103,16 +102,15 @@ box-shadow:         3px 3px 5px 6px #ccc;
                 <input type="submit" class="btn btn-primary btn-lg btn-block" value="Submit" id="customer_submit">
             </div>
             <div>
-            <p>Don't have a Partner Account? <a href="advertiser_register.php">Sign up now</a>.</p>
-            </div>
-            
+            <p>Don't have a Booker Account? <a href="customer_register.php">Sign up now</a>.</p>
+            </div>   
         </form>   
     </div>  
     <div>
-    <h1>Booker log in</h1>
-    <p>This is the Partner Area, please go to <a href="customer_login.php"> Customer log in</a> instead</p>
+    <h1>Partner?</h1>
+    <p>This is the Customer area, please go to <a href="advertiser_login.php"> Partner log in</a> instead</p>
     </div> 
 <br><br>
-
+  
 </body>
 </html>
