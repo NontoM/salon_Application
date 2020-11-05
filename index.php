@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- CDN for Font Awesome Icons -->
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
@@ -128,14 +127,14 @@ And Salons  <br> Nearby</h2>
 </section>
 
 <!-- Stylists Section -->
-<section class="property-section">
+<section class="stylists-section">
 		<div class="container p-20">
 			<div class="section-title">
 				<h2>Categories</h2>
 			</div>
 			<div class="row">
 				<div class="col-lg-6">
-					<div class="property-item">
+					<div class="stylists-item">
 						<div class="pi-image">
 							<img src="View/images/st1.png" alt="">
 							<div class="pi-badge new">***</div>
@@ -145,7 +144,7 @@ And Salons  <br> Nearby</h2>
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<div class="property-item">
+					<div class="stylists-item">
 						<div class="pi-image">
 							<img src="View/images/st2.png" alt="">
 							<div class="pi-badge offer">***</div>
@@ -160,7 +159,7 @@ And Salons  <br> Nearby</h2>
 	<!-- Stylists Section end -->
 
 <!-- Stylists Section -->
-<section class="property-section">
+<section class="stylists-section">
 		<div class="container">
 			<div class="section-title">
 				<h2>Featured Stylists</h2>
@@ -178,7 +177,7 @@ And Salons  <br> Nearby</h2>
 					</div>
 				</div>
 				<div class="col-lg-4">
-					<div class="property-item">
+					<div class="stylists-item">
 						<div class="pi-image">
 							<img src="View/images/st2.png" alt="">
 							<div class="pi-badge offer">***</div>
@@ -189,7 +188,7 @@ And Salons  <br> Nearby</h2>
 					</div>
 				</div>
 				<div class="col-lg-4">
-					<div class="property-item">
+					<div class="stylists-item">
 						<div class="pi-image">
 							<img src="View/images/st3.png" alt="">
 							<div class="pi-badge new">***</div>
@@ -206,14 +205,14 @@ And Salons  <br> Nearby</h2>
 
 </section>
 <!-- Salons Section -->
-<section class="property-section">
+<section class="salons-section">
 		<div class="container">
 			<div class="section-title">
 				<h2>Featured Salons</h2>
 			</div>
 			<div class="row">
 				<div class="col-lg-4">
-					<div class="property-item">
+					<div class="salons-item">
 						<div class="pi-image">
 							<img src="View/images/salon1.jpg" alt="">
 							<div class="pi-badge new">***</div>
@@ -224,7 +223,7 @@ And Salons  <br> Nearby</h2>
 					</div>
 				</div>
 				<div class="col-lg-4">
-					<div class="property-item">
+					<div class="salons-item">
 						<div class="pi-image">
 							<img src="View/images/salonTwo.png" alt="">
 							<div class="pi-badge offer">***</div>
@@ -235,7 +234,7 @@ And Salons  <br> Nearby</h2>
 					</div>
 				</div>
 				<div class="col-lg-4">
-					<div class="property-item">
+					<div class="salons-item">
 						<div class="pi-image">
 							<img src="View/images/salonF.png" alt="">
 							<div class="pi-badge new">***</div>
