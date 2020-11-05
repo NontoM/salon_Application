@@ -84,8 +84,7 @@ form.example::after {
 <!-- Navbar brand -->
       <a class="navbar-brand" href="#"><img src="View/images/logo2.png" alt="logo"></a>
       <a class="nav-link" href="View/partners.php">Partners</a>
-	  <a class="nav-link" href="View/customer_register.php">Sign up</a>
-	  <a class="nav-link" href="View/customer_login.php">Log in</a>
+	  <a class="nav-link" href="View/customer.php">Login / Register</a>
       
 <!-- Collapse button -->
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"

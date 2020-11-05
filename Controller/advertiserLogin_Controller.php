@@ -63,7 +63,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             // Redirect user to welcome page
                             echo "<div class='alert alert-success text-center'>
                             <strong> Message!</strong> You have login successfully, Please wait...
-                            </div>".header("refresh:5 advertiser_ads.php");
+                            </div>".header("refresh:5 advertiser_list_ads.php");
                         } else{
                             // Display an error message if password is not valid
                             $passcode_err = "The password you entered was not valid.";

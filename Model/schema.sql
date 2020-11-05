@@ -1,5 +1,5 @@
-CREATE TABLE customer_Table(
-customerid int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE customers(
+customerid int(6) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 username VARCHAR(50) NOT NULL UNIQUE,
 passcode VARCHAR(255) NOT NULL,
 created_at DATETIME DEFAULT CURRENT_TIMESTAMP
@@ -25,30 +25,21 @@ created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE advertisers_ads(
-adsid int(6) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-company varchar(50) UNIQUE,
-advertisr_email varchar(50) NOT NULL UNIQUE,
-advertiser_phone varchar (50) NOT NULL UNIQUE,
-advertiser_Co_location varchar(50) NOT NULL UNIQUE,
+adsid int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+company varchar(50) NOT NULL UNIQUE,
+emailAddress varchar(50) NOT NULL UNIQUE,
+phoneNumber varchar (50) NOT NULL UNIQUE,
 descrp varchar(80) NOT NULL,
+location varchar(50) NOT NULL UNIQUE,
+tradingDays varchar(50) NOT NULL,
 openHrs varchar(50) NOT NULL,
 closingHrs varchar(50) NOT NULL,
-inputState  varchar(50) NOT NULL,
-inputCity  varchar(50) NOT NULL,
-inputAddress varchar(50)  NOT NULL UNIQUE,
-inputAddress2varchar(50)  NOT NULL UNIQUE,
+address varchar(50)  NOT NULL UNIQUE,
+city  varchar(50) NOT NULL,
+province varchar(50) NOT NULL,
 business_im varchar(50)  NOT NULL UNIQUE,
 created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-advertisersid int NOT NULL,
-FOREIGN KEY (advertisersid) REFERENCES advertisers_Table(advertisersid)
 );
-
-$company = $advertisr_email= $advertiser_phone = $advertiser_Co_location = $openHrs
- = $closingHrs = $inputAddress = $inputAddress2 = $inputCity = $inputState = $business_img = "";
-
-
-
-
 
 CREATE TABLE adsimages (
 imagesid INTEGER UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
